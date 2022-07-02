@@ -35,8 +35,9 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+ const cartTotal = cart.reduce( (totalPrice,food) => totalPrice + food.price , 0)
 
+console.log(`Total price of cart is ${cartTotal}`);
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -56,7 +57,13 @@ const cart = [
 //CODE HERE
 
 
+const calcFinalPrice = (cartTotal,couponValue,tax)  =>  (cartTotal * (1+ tax)) - couponValue
 
+let finalPrice = calcFinalPrice(cartTotal,10,0.06)
+
+
+
+console.log(`Final Value after tax and coupon value is ${finalPrice} `);
 //////////////////PROBLEM 3////////////////////
 /*  
     In this problem, you'll create a model for 
@@ -78,7 +85,25 @@ const cart = [
 */
 
 /*
-    TEXT ANSWER HERE
+    
+ object `customer` that has 4
+    properties: 
+        - name 
+        - address
+        - phoneNumber
+        - email  
+        - ispaid
+        -foodDeliveryType
+
+        name - [string] as its Name of Customer ex. 'James Bond'
+        Address - [string] as its address if its for delivery'
+        phoneNumber -  [string] as its not for calculatiions
+        email - [string] - customers email to send promotional emails
+        ispaid -[boolean] - price paid or not 
+        foodDeliveryType - [string] - (values will be 'delivery','pick-up' or 'dine-in')
+   
+
+    
 
 */
 
@@ -88,3 +113,13 @@ const cart = [
 */
 
 //CODE HERE
+let customer = {
+     name : 'James' ,
+     address : '356 south blvd , Rochester hills NY' ,
+     phoneNumber : '8015555418' ,
+     email : 'jamessdsfr@gmail.com',
+     ispaid : true ,
+     foodDeliveryType: 'delivery'
+
+}
+console.log(customer)
