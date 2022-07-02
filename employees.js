@@ -104,7 +104,6 @@ class Manager extends Employee {
    
    }
 }
-
 /*
     Create a new instance of your class.
     Save it to a variable called `manager`.
@@ -115,14 +114,12 @@ class Manager extends Employee {
     shifts: weekday mornings, weekday afternoons
     employees: Cece and Schmidt
 */
-
 //CODE HERE
 let manager = new Manager(`Winston`,`weekday mornings, weekday afternoons`,['Cece','Schmidt'])
 /*
     Call the `getEmployees` method on the
     `manager` object.  
 */
-
 //CODE HERE
 manager.getEmployees();
 /*
@@ -138,6 +135,5 @@ manager.addEmployee('Coach');
     `manager` object again to confirm 
     that an employee was added.
 */
-
 //CODE HERE 
 manager.getEmployees()
